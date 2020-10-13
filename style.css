@@ -18,7 +18,14 @@ h6{
     margin: 10px;
     padding: 2%;
 }
-
+.searchBtn{
+    display: block;
+    color: black;
+    border-radius: 1px;
+    border-color: darkgray;
+    background-color: white;
+    width: 100%;
+}
 #searchArea{
     background-color: rgb(240, 240, 240);
     
@@ -29,13 +36,6 @@ h6{
     color: white;
 }
 
-#searchBtn{
-    display: block;
-    border-radius: 1px;
-    border-color: darkgray;
-    background-color: white;
-    width: 100%;
-}
 
 #currentWeather{
     margin: 10px;
