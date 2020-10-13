@@ -36,3 +36,11 @@ h6{
     background-color: white;
     width: 100%;
 }
+
+#currentWeather{
+    margin: 10px;
+    padding: 2%;
+    border-style: solid;
+    border-color: darkgrey;
+    border-radius: 5px;
+}
