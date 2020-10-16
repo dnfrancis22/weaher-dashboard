@@ -62,7 +62,7 @@ $(document).ready(function () {
       var lon = response.coord.lon;
       // this query is for the UV index
       var uvUrl =
-        "http://api.openweathermap.org/data/2.5/uvi?lat=" +
+        "https://api.openweathermap.org/data/2.5/uvi?lat=" +
         lat +
         "&lon=" +
         lon +
@@ -73,6 +73,7 @@ $(document).ready(function () {
         url: uvUrl,
         method: "GET",
       }).then(function (response) {
+        console.log(response);
 // these appends the UV Index  to thw current weather to the screen.
         $(".uvIndex").text("UV Index: ").append("<span class='uv'>"+ response.value +'</span>');
 // these conditionals change the background color of the UV index depending on how high the index is.
