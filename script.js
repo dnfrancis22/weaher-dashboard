@@ -47,7 +47,7 @@ $(document).ready(function () {
       APIKey +
       "&units=imperial";
 
-    // We then created an AJAX call
+    // we create the ajax call to get the information we need from the API.
     $.ajax({
       url: queryURL,
       method: "GET",
@@ -73,7 +73,22 @@ $(document).ready(function () {
         url: uvUrl,
         method: "GET",
       }).then(function (response) {
-        $(".uvIndex").text("UV Index: " + response.value);
+// these appends the UV Index  to thw current weather to the screen.
+        $(".uvIndex").text("UV Index: ").append("<span class='uv'>"+ response.value +'</span>');
+// these conditionals change the background color of the UV index depending on how high the index is.
+        if (response.value <= 3) {
+          $(".uv").attr("class", "low");
+        }
+        //when is it past?
+        if (response.value >= 7) {
+          $(".uv").attr("class", "high");
+        }
+
+        if (response.value > 3 && response.value < 7) {
+          $(".uv").attr("class", "med");
+        }
+
+
       });
 
       // these variables reformat the date as well as hold query for the weather icons

@@ -48,3 +48,25 @@ h6{
     border-color: darkgrey;
     border-radius: 5px;
 }
+/* styling used to illustrate the uv Index */
+.high{
+    background-color: #ff0000;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  
+  .med {
+    background-color: #ff8800e8;
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  
+  .low {
+    background-color: #00ff00;
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  
