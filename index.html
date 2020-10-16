@@ -28,11 +28,16 @@
     ></script>
   </head>
   <body>
+    <!-- main header -->
     <header>Weather Dashboard</header>
+    <!-- this container holds all of the content for the page. -->
     <main class="container-fluid">
       <div class="row">
+        <!-- this div holds the the search field and dynamically generated buttons. -->
         <div class="col-sm-3" id="searchArea">
+          <!-- search header -->
           <h6>Search for a City:</h6>
+          <!-- this div holds the input field and search button. -->
           <div class="input-group mb-3">
             <input type="text" class="form-control" id="searchField" />
             <div class="input-group-append">
@@ -45,21 +50,16 @@
               </button>
             </div>
           </div>
+          <!-- area for dynamically generated buttons -->
           <div id="buttonArea">
-            <!-- <button type="button" class="btn btn-secondary searchBtn">
-              Secondary
-            </button>
-            <button type="button" class="btn btn-secondary searchBtn">
-              Secondary
-            </button>
-            <button type="button" class="btn btn-secondary searchBtn">
-              Secondary -->
             </button>
           </div>
         </div>
+        <!-- this div contains the current weather and the five day fore cast. -->
         <div class="col-sm-9">
           <div class="row">
             <div class="col-sm-12">
+              <!-- this div holds the current weather. -->
               <div id="currentWeather">
                 <div class="city"></div>
                 <div id="icon"></div>
@@ -68,6 +68,7 @@
                 <div class="wind"></div>
                 <div class="uvIndex"></div>
               </div>
+              <!-- this container holds all of the elements for the five day Forecast. -->
               <div class="container" id="fiveDayCont">
                 <h6>5 Day Forecast:</h6>
                 <div class="fiveDay">
