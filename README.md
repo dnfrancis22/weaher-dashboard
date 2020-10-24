@@ -14,7 +14,7 @@ Or you can just click here: https://dnfrancis22.github.io/weather-dashboard/
 
 **Usage**
 
-When the page loads type the name of a city into the search field and click the search button. You will be presented with the current weather and a five daily forecast. A button will be generated that is linked to the city you searched for. When that button is clicked the weather information for that city will be recalled. 
+When the page loads type the name of a city into the search field and click the search button. You will be presented with the current weather and a five day forecast. A button will be generated that is linked to the city you searched for. When that button is clicked the weather information for that city will be recalled. 
 
 ![planner](./assets/weatherApp.png)
 

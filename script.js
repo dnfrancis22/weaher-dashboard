@@ -3,6 +3,7 @@ $(document).ready(function () {
   var APIKey = "100ea10c1f1db96d42a65493df31b77f";
   // this array holds the  cities created by the user search.
   var cities = ["Atlanta"];
+
   // these hide current weather and five day forecast until needed.
   fiveDayCont.style.display = "none";
 
@@ -24,6 +25,24 @@ $(document).ready(function () {
       fiveDay($(this).text());
     });
   }
+  // this function stores the cities from the array to local Storage.
+  function init() {
+
+    var storedCities = JSON.parse(localStorage.getItem("cities"));
+  
+    // If cities were retrieved from localStorage, update the cities array to it
+    if (storedCities !== null) {
+      cities = storedCities;
+    }
+  
+    // Render buttons to the DOM
+    renderButtons();
+  }
+  
+  function storeCities() {
+    // Stringify and set "cities" key in localStorage to cities array
+    localStorage.setItem("cities", JSON.stringify(cities));
+  }
   // onclick event for the main submit button.
   $("#button-addon2").on("click", function (event) {
     var city = $("#searchField").val();
@@ -34,6 +53,8 @@ $(document).ready(function () {
     oneDay(city);
 
     fiveDay(city);
+
+    storeCities();
   });
   // this function populates the current weather.
   function oneDay(city) {
@@ -201,6 +222,8 @@ $(document).ready(function () {
   }
   // these functions are called when the page loads.
   // I have Atlanta already in the array so that it will populate once the page loads and the page is not blank.
+  // this first function calls the cities from local Storage.
+  init();
   renderButtons();
   oneDay("Atlanta");
   fiveDay("atlanta");
