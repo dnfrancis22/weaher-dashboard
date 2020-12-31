@@ -1,4 +1,4 @@
-# weaher-dashboard
+# weather-dashboard
 
 **Description**
 
